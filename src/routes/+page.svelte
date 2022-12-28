@@ -1,2 +1,8 @@
-<h1>Welcome to SvelteKit</h1>
-<p>Visit <a href="https://kit.svelte.dev">kit.svelte.dev</a> to read the documentation</p>
+<script>
+	import { date } from '../stores';
+  import '../styles/style.css';
+</script>
+
+<p>{$date}</p>
+
+<style src="../styles/style.css"></style>
