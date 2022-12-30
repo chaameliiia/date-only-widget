@@ -9,6 +9,6 @@
 </script>
 
 <p>{$date}</p>
-<img src={photo?.url || ''} alt={photo?.alt || ''} />
+<img src={photo?.src.large || ''} alt={photo?.alt || ''} />
 
 <style src="../styles/style.css"></style>
