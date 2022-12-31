@@ -1,7 +1,8 @@
-import { readable } from 'svelte/store';
+import { derived, readable } from 'svelte/store';
 
 const now = new Date();
 
+// READABLE
 export const year = readable('', (set) => set(`${now.getFullYear()}`));
 
 export const month = readable('', (set) => {
@@ -31,3 +32,7 @@ export const days = readable('', (set) => {
 	const daysArr = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', ''];
 	set(daysArr[now.getDay()]);
 });
+
+
+// DERIVED
+export const page = derived(date, $date => Math.floor(Math.random() * (100 - Number($date))));
