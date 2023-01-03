@@ -1,60 +1,79 @@
 /* common */
-p {
-  font-family: 'IBM Plex Sans KR', sans-serif;
-  font-weight: 500;
-  line-height: 1;
-  margin: 0;
+body {
+	margin: 0;
+	padding: 0;
 }
 
+span {
+	color: var(--textColor);
+	font-family: 'IBM Plex Sans KR', sans-serif;
+	font-weight: bold;
+	line-height: 0.75em;
+	margin: 0;
+	padding: 0;
+}
+
+/* wrappers */
 .wrapper {
-  align-items: start;
-  background-image: var(--url);
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  border: 1px solid #000;
-  display: flex;
-  justify-content: center;
-  padding: 20px 0;
-  width: 100%;
+	align-items: center;
+	background-image: var(--url);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	display: flex;
+	height: 100vh;
+	justify-content: flex-end;
+	position: relative;
+	width: 100%;
+}
+
+.text_container {
+	align-items: center;
+	background-color: var(--color);
+	box-sizing: border-box;
+	display: flex;
+	height: 220px;
+	padding-left: 60px;
+	padding-right: 100px;
+}
+
+.year_wrapper {
+	align-items: flex-end;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+	justify-content: flex-end;
+	margin-right: 20px;
 }
 
 .col_wrapper {
-  border: 1px solid orange;
-  display: flex;
-  flex-direction: column;
+	display: flex;
+	flex-direction: column;
 }
 
 .row_wrapper {
-  display: flex;
-  justify-content: space-between;
-  padding-right: 15px;
+	align-items: flex-start;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 20px;
 }
 
-
+/* elements */
 .year {
-  border: 1px solid green;
-  font-size: 50px;
-  margin-bottom: 40px;
-  letter-spacing: 15px;
+	font-size: 90px;
 }
 
 .month {
-  border: 1px solid pink;
-  color: var(--color);
-  font-size: 70px;
-  font-weight: bold;
-  line-height: 1;
-  margin-right: 15px;
-  transform: rotate(90deg) translate(20%, -50%);
+	font-size: 80px;
+	padding-right: 5px;
+	letter-spacing: 2px;
 }
 
 .date {
-  border: 1px solid purple;
-  font-size: 30px;
+	font-size: 60px;
 }
 
 .days {
-  border: 1px solid blue;
-  font-size: 30px;
+	font-size: 70px;
 }
