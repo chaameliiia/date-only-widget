@@ -16,7 +16,9 @@ export async function load({
 	});
 
 	try {
-		const res = await fetch(`${PUBLIC_BASE_URL}/search?query=colors&per_page=1&page=${reqPage}}`);
+		const res = await fetch(
+			`${PUBLIC_BASE_URL}/search?query=contemporary%20art&per_page=1&page=${reqPage}}`
+		);
 		const data = await res.json();
 
 		return data;
