@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"@sveltejs/adapter-static": "^1.0.0",
 		"node-vibrant": "^3.1.6",
 		"pexels": "^1.4.0"
 	}

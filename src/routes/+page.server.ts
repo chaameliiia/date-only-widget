@@ -1,3 +1,5 @@
+export const prerender = true;
+
 import { onDestroy } from 'svelte';
 import type { Unsubscriber } from 'svelte/store';
 
