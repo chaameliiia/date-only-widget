@@ -33,6 +33,7 @@
 	},
 	"type": "module",
 	"dependencies": {
+		"node-vibrant": "^3.1.6",
 		"pexels": "^1.4.0"
 	}
 }
