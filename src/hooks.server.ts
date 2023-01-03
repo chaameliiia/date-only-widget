@@ -1,7 +1,7 @@
 import type { RequestEvent } from './routes/$types';
 
-import { PUBLIC_BASE_URL } from '$env/static/public';
 import { API_KEY } from '$env/static/private';
+import { PUBLIC_BASE_URL } from '$env/static/public';
 
 /** @type {import('@sveltejs/kit').HandleFetch} */
 export async function handleFetch({
