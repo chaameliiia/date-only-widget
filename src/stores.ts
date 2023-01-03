@@ -24,15 +24,21 @@ export const month = readable('', (set) => {
 	set(monthArr[now.getMonth()]);
 });
 
-export const date = readable(0, (set) => {
-	set(now.getDate());
-});
+export const date = readable(0, (set) => set(now.getDate()));
 
 export const days = readable('', (set) => {
-	const daysArr = ['SUN', 'MON', 'TUE', 'WED', 'THU', 'FRI', 'SAT', ''];
+	const daysArr = [
+		'SUNDAY',
+		'MONDAY',
+		'TUESDAY',
+		'WEDNESDAY',
+		'THURSDAY',
+		'FRIDAY',
+		'SATURDAY',
+		''
+	];
 	set(daysArr[now.getDay()]);
 });
 
-
 // DERIVED
-export const page = derived(date, $date => Math.floor(Math.random() * (100 - Number($date))));
+export const page = derived(date, ($date) => Math.floor(Math.random() * (100 - Number($date))));

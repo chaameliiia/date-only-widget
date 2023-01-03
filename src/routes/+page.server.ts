@@ -10,18 +10,19 @@ export async function load({
 }: {
 	fetch: (input: RequestInfo | URL, init?: RequestInit | undefined) => Promise<Response>;
 }) {
-	try {
-		let reqPage = 0;
-		const unsubscribe: Unsubscriber = await page.subscribe((value) => (reqPage = value));
-		const res = await fetch(
-			`${PUBLIC_BASE_URL}/search?query=colors&per_page=1&page=${reqPage}}`
-		);
-		const data = res.json();
+	let reqPage = 0;
+	const unsubscribe: Unsubscriber = page.subscribe((value) => {
+		reqPage = value;
+	});
 
-		onDestroy(unsubscribe);
+	try {
+		const res = await fetch(`${PUBLIC_BASE_URL}/search?query=colors&per_page=1&page=${reqPage}}`);
+		const data = await res.json();
 
 		return data;
 	} catch (err) {
 		console.error('error::', err);
 	}
+
+	onDestroy(unsubscribe);
 }
